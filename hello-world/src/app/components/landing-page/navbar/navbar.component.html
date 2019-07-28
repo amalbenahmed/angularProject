@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['/']"><img width="100" src="../../../../assets/formalogo.png" alt="formalab"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto"></ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-info my-2 my-sm-0" [routerLink]="['/inscription']">inscription</button>
+            <button class="btn btn-primary  mx-3 my-2 my-sm-0" [routerLink]="['/connexion']">connexion</button>
+            <button class="btn btn-danger my-2 my-sm-0">deconnexion</button>
+
+        </form>
+    </div>
+</nav>

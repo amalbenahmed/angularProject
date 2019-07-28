@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<p>gestion-users works!</p>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Utilisateur</th>
+                <th>Password</th>
+                <th>Confirm</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let confirm of confirm">
+                <th>{{confirm.utilisateur}}</th>
+                <td>{{confirm.password}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="confirmer1(done)">Confirmer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-footer></app-footer>

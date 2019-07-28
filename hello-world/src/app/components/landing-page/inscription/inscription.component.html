@@ -1,0 +1,156 @@
+<app-navbar></app-navbar>
+<p>inscription works!</p>
+<div class="container">
+    <form [formGroup]="formInscription" (ngSubmit)="Inscription()">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <h1>Inscription</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="inputBox ">
+                    <div class="inputText">First Name</div>
+                    <input class="form-control" placeholder="Enter FirstName" type="text" name="FirstName"
+                        formControlName="FirstName">
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="inputBox">
+                    <div class="inputText">Last Name</div>
+                    <input class="form-control" placeholder="Enter LastName" type="text" name="LastName"
+                        formControlName="LastName">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="inputBox">
+                    <p>Email address</p>
+                    <input type="email" class="form-control" placeholder="Enter email" name="email"
+                        formControlName="email">
+                    <div *ngIf="email.touched && email.invalid" class="alert alert-danger mt-2">
+                        <div *ngIf="email.errors.required">
+                            Le champs email est obligatoire
+                        </div>
+                        <div *ngIf="email.errors.email">
+                            Email invalide
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="inputBox">
+                    <p>Number</p>
+                    <input class="form-control" placeholder="Enter Number" name="Number" formControlName="Number">
+                    <div *ngIf="Number.touched && Number.invalid" class="alert alert-danger">
+                        <div *ngIf="Number.errors.required">
+                            Le champs Number est obligatoire
+                        </div>
+
+                        <div *ngIf="Number.errors.minlength">
+                            Le champs Number doit avoir au minimum 8 cractéres
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="inputBox">
+                    <p>Password</p>
+                    <input class="form-control" type="password"  placeholder="Password" name="password"
+                        formControlName="password">
+                    <div *ngIf="password.touched && password.invalid" class="alert alert-danger">
+
+                        <div *ngIf="password.errors.required">
+                            Le champs password est obligatoire
+                        </div>
+
+                        <div *ngIf="password.errors.minlength">
+                            Le champs password doit avoir au minimum 8 cractéres
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <p>Confirm Password</p>
+                    <input type="password" class="form-control" placeholder="Confirm Password" name="confirm password"
+                        formControlName="password">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </form>
+    <!--<form [formGroup]="formInscription" (ngSubmit)="Inscription()">
+        <div class="form-group">
+            <p>FirstName</p>
+            <input class="form-control" placeholder="Enter FirstName" name=" FirstName" formControlName=" FirstName">
+        </div>
+        <div class="form-group">
+            <p>LastName</p>
+            <input class="form-control" placeholder="Enter LastName" name="LastName" formControlName="LastName">
+        </div>
+
+        <p>Email address</p>
+        <input type="email" class="form-control" placeholder="Enter email" name="email" formControlName="email">
+        <div *ngIf="email.touched && email.invalid" class="alert alert-danger mt-2">
+            <div *ngIf="email.errors.required">
+                Le champs email est obligatoire
+            </div>
+            <div *ngIf="email.errors.email">
+                Email invalide
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p>Number</p>
+            <input class="form-control" placeholder="Enter Number" name="Number" formControlName="Number">
+            <div *ngIf="Number.touched && Number.invalid" class="alert alert-danger">
+                <div *ngIf="Number.errors.required">
+                    Le champs Number est obligatoire
+                </div>
+    
+                <div *ngIf="Number.errors.minlength">
+                    Le champs Number doit avoir au minimum 8 cractéres
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p>Password</p>
+            <input type="password" class="form-control" placeholder="Password" name="password"
+                formControlName="password">
+        </div>
+        <div *ngIf="password.touched && password.invalid" class="alert alert-danger">
+               
+            <div *ngIf="password.errors.required">
+                Le champs password est obligatoire
+            </div>
+
+            <div *ngIf="password.errors.minlength">
+                Le champs password doit avoir au minimum 8 cractéres
+            </div>
+
+        </div>
+        <div class="form-group">
+            <p>Confirm Password</p>
+            <input type="password" class="form-control" placeholder="Confirm Password" name="confirm password"
+                formControlName="password">
+        </div>
+
+    </form>-->
+</div>
+<app-footer></app-footer>
